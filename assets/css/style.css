@@ -1,6 +1,10 @@
 * {
     box-sizing: border-box;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
   
   /* brand color palette */
   :root {
@@ -219,11 +223,31 @@
     color: var(--secondary);
   }
   
-  /* portfolio project images */
   /* TODO: Add portfolio project images here*/
+  /* portfolio project images */
   
-  /* media queries */
-  
+  section .flex-item {
+    background-image: url("../images/placeholder.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+  img {
+    display: none;
+  }
+
   /* TODO: add media query for a max-width of 980px */
-  
   /* TODO: add media query for a max-width of 768px */
+  /* media queries */
+
+  @media screen and (max-width: 768px) {
+    main, nav, address {
+      flex-direction: column;
+    }
+
+    .flex-item:first-child {
+      min-height: 150px;
+      max-height: 150px;
+      flex-basis: calc(50% - 1em);
+  }
+  }
